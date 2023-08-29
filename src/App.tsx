@@ -1,18 +1,17 @@
 import "./App.css";
-// import Effect from "./hooks/Effect";
-// import Params from "./hooks/Params";
-import ApiLap from "./hooks/ApiLap";
+
 import { Routes, Route } from "react-router-dom";
-import ShowData from "./hooks/ShowData";
+import Read from "./API-Component/Read";
+import PostApi from "./API-Component/PostApi";
+import UbdataUser from "./API-Component/UbdataUser";
 
 export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/ApiLap" element={<ApiLap />}></Route>
-        <Route path="ShowData/:id" element={<ShowData />}></Route>
-        {/* <Route path="/" element={<Effect />} />
-        <Route path="/Params/:id" element={<Params />} /> */}
+        <Route path="/" element={<PostApi />}></Route>
+        <Route path="Read" element={<Read />}></Route>
+        <Route path="UbdataUser" element={<UbdataUser />}></Route>
       </Routes>
     </>
   );
